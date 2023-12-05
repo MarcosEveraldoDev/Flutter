@@ -153,10 +153,21 @@ class _HomePageState extends State<HomePage> {
                 borderRadius: BorderRadius.all(Radius.circular(8)),
               ),
               child: const Center(
-                child: Text(
-                  'Sign Up with Email ID',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white),
+                child: Row(
+                  children: [
+                    Image(
+                      image: ResizeImage(
+                        AssetImage('imagens/google.png'),
+                        height: 20,
+                        width: 40,
+                      ),
+                    ),
+                    Text(
+                      'Sign Up with Google',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
                 ),
               ),
             )
