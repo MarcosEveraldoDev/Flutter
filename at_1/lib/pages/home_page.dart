@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color.fromRGBO(92, 92, 224, 1),
+                          color: Color.fromRGBO(80, 146, 252, 1),
                           borderRadius: BorderRadius.circular(90)),
                       margin: const EdgeInsets.only(left: 140, top: 0),
                     ),
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                       height: 60,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color.fromRGBO(92, 92, 224, 1),
+                          color: Color.fromRGBO(80, 146, 252, 1),
                           borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(80))),
                       margin: const EdgeInsets.only(
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                   height: 120,
                   width: 60,
                   decoration: const BoxDecoration(
-                    color: Color.fromRGBO(92, 92, 224, 1),
+                    color: Color.fromRGBO(80, 146, 252, 1),
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(120),
                       bottomLeft: Radius.circular(120),
@@ -131,7 +131,7 @@ class _HomePageState extends State<HomePage> {
               height: 40,
               width: 300,
               decoration: const BoxDecoration(
-                color: Color.fromRGBO(92, 92, 224, 1),
+                color: Color.fromRGBO(80, 146, 252, 1),
                 borderRadius: BorderRadius.all(Radius.circular(8)),
               ),
               child: const Center(
@@ -154,22 +154,48 @@ class _HomePageState extends State<HomePage> {
               ),
               child: const Center(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image(
                       image: ResizeImage(
-                        AssetImage('imagens/google.png'),
+                        AssetImage('assets/google.png'),
                         height: 20,
-                        width: 40,
+                        width: 20,
                       ),
                     ),
-                    Text(
-                      'Sign Up with Google',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Center(
+                      child: Text(
+                        'Sign Up with Google',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.black),
+                      ),
                     ),
                   ],
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Already have an account? ',
+                  style: TextStyle(fontSize: 15, color: Colors.grey),
+                ),
+                Text(
+                  'Sign In',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 15,
+                    decoration: TextDecoration.underline,
+                  ),
+                )
+              ],
             )
           ],
         ),
